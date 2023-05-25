@@ -1,0 +1,128 @@
+[2023-05-10 11:06:06] local.ERROR: SQLSTATE[42703]: Undefined column: 7 ERROR:  column "category_id" does not exist
+LINE 1: select * from "language" order by "category_id" asc
+                                          ^ (Connection: pgsql, SQL: select * from "language" order by "category_id" asc) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42703): SQLSTATE[42703]: Undefined column: 7 ERROR:  column \"category_id\" does not exist
+LINE 1: select * from \"language\" order by \"category_id\" asc
+                                          ^ (Connection: pgsql, SQL: select * from \"language\" order by \"category_id\" asc) at D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Connection.php:793)
+[stacktrace]
+#0 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Connection.php(753): Illuminate\\Database\\Connection->runQueryCallback('select * from \"...', Array, Object(Closure))
+#1 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Connection.php(422): Illuminate\\Database\\Connection->run('select * from \"...', Array, Object(Closure))
+#2 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Query\\Builder.php(2719): Illuminate\\Database\\Connection->select('select * from \"...', Array, true)
+#3 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Query\\Builder.php(2707): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Query\\Builder.php(3248): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#5 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Query\\Builder.php(2708): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#6 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Eloquent\\Builder.php(717): Illuminate\\Database\\Query\\Builder->get(Array)
+#7 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Eloquent\\Builder.php(701): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#8 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\app\\Http\\Controllers\\master\\LanguageController.php(13): Illuminate\\Database\\Eloquent\\Builder->get()
+#9 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Http\\Controllers\\Master\\LanguageController->index()
+#10 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#12 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#13 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#14 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call(Array, Array)
+#15 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(357): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#16 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\Master\\LanguageController), 'index', Array)
+#17 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction(Array)
+#18 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#19 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#20 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#21 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(177): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#22 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch(NULL)
+#23 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#24 {main}
+
+[previous exception] [object] (PDOException(code: 42703): SQLSTATE[42703]: Undefined column: 7 ERROR:  column \"category_id\" does not exist
+LINE 1: select * from \"language\" order by \"category_id\" asc
+                                          ^ at D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Connection.php:419)
+[stacktrace]
+#0 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Connection.php(419): PDOStatement->execute()
+#1 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Connection.php(786): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from \"...', Array)
+#2 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Connection.php(753): Illuminate\\Database\\Connection->runQueryCallback('select * from \"...', Array, Object(Closure))
+#3 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Connection.php(422): Illuminate\\Database\\Connection->run('select * from \"...', Array, Object(Closure))
+#4 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Query\\Builder.php(2719): Illuminate\\Database\\Connection->select('select * from \"...', Array, true)
+#5 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Query\\Builder.php(2707): Illuminate\\Database\\Query\\Builder->runSelect()
+#6 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Query\\Builder.php(3248): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#7 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Query\\Builder.php(2708): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#8 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Eloquent\\Builder.php(717): Illuminate\\Database\\Query\\Builder->get(Array)
+#9 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Eloquent\\Builder.php(701): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#10 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\app\\Http\\Controllers\\master\\LanguageController.php(13): Illuminate\\Database\\Eloquent\\Builder->get()
+#11 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Http\\Controllers\\Master\\LanguageController->index()
+#12 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#13 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#14 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#15 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#16 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call(Array, Array)
+#17 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(357): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#18 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\Master\\LanguageController), 'index', Array)
+#19 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction(Array)
+#20 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#21 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#22 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#23 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(177): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#24 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch(NULL)
+#25 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#26 {main}
+"} 
+[2023-05-10 13:49:13] local.ERROR: SQLSTATE[42703]: Undefined column: 7 ERROR:  column "language_id" does not exist
+LINE 1: select * from "address" order by "language_id" asc
+                                         ^ (Connection: pgsql, SQL: select * from "address" order by "language_id" asc) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42703): SQLSTATE[42703]: Undefined column: 7 ERROR:  column \"language_id\" does not exist
+LINE 1: select * from \"address\" order by \"language_id\" asc
+                                         ^ (Connection: pgsql, SQL: select * from \"address\" order by \"language_id\" asc) at D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Connection.php:793)
+[stacktrace]
+#0 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Connection.php(753): Illuminate\\Database\\Connection->runQueryCallback('select * from \"...', Array, Object(Closure))
+#1 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Connection.php(422): Illuminate\\Database\\Connection->run('select * from \"...', Array, Object(Closure))
+#2 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Query\\Builder.php(2719): Illuminate\\Database\\Connection->select('select * from \"...', Array, true)
+#3 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Query\\Builder.php(2707): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Query\\Builder.php(3248): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#5 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Query\\Builder.php(2708): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#6 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Eloquent\\Builder.php(717): Illuminate\\Database\\Query\\Builder->get(Array)
+#7 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Eloquent\\Builder.php(701): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#8 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\app\\Http\\Controllers\\master\\AddressController.php(13): Illuminate\\Database\\Eloquent\\Builder->get()
+#9 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Http\\Controllers\\Master\\AddressController->index()
+#10 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#12 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#13 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#14 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call(Array, Array)
+#15 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(357): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#16 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\Master\\AddressController), 'index', Array)
+#17 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction(Array)
+#18 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#19 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#20 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#21 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(177): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#22 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch(NULL)
+#23 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#24 {main}
+
+[previous exception] [object] (PDOException(code: 42703): SQLSTATE[42703]: Undefined column: 7 ERROR:  column \"language_id\" does not exist
+LINE 1: select * from \"address\" order by \"language_id\" asc
+                                         ^ at D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Connection.php:419)
+[stacktrace]
+#0 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Connection.php(419): PDOStatement->execute()
+#1 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Connection.php(786): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from \"...', Array)
+#2 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Connection.php(753): Illuminate\\Database\\Connection->runQueryCallback('select * from \"...', Array, Object(Closure))
+#3 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Connection.php(422): Illuminate\\Database\\Connection->run('select * from \"...', Array, Object(Closure))
+#4 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Query\\Builder.php(2719): Illuminate\\Database\\Connection->select('select * from \"...', Array, true)
+#5 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Query\\Builder.php(2707): Illuminate\\Database\\Query\\Builder->runSelect()
+#6 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Query\\Builder.php(3248): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#7 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Query\\Builder.php(2708): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#8 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Eloquent\\Builder.php(717): Illuminate\\Database\\Query\\Builder->get(Array)
+#9 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\database\\Eloquent\\Builder.php(701): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#10 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\app\\Http\\Controllers\\master\\AddressController.php(13): Illuminate\\Database\\Eloquent\\Builder->get()
+#11 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Http\\Controllers\\Master\\AddressController->index()
+#12 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#13 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#14 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#15 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\illuminate\\container\\Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#16 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(391): Illuminate\\Container\\Container->call(Array, Array)
+#17 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(357): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#18 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(331): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\Master\\AddressController), 'index', Array)
+#19 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(284): Laravel\\Lumen\\Application->callControllerAction(Array)
+#20 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(269): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#21 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(171): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#22 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(431): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#23 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(177): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#24 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch(NULL)
+#25 D:\\SMK Telkom Purwokerto\\Laravel\\dvd-rental\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#26 {main}
+"} 
