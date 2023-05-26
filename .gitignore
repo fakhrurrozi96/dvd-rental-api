@@ -1,3 +1,4 @@
+!.gitnignore
 /vendor
 /.idea
 Homestead.json
